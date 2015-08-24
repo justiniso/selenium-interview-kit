@@ -7,7 +7,7 @@ class SeleniumHelper
 
     def wait_find(by, seconds = 5)
         wait = Selenium::WebDriver::Wait.new(:timeout => seconds)
-        wait.until { @driver.find_element(:id, by) }
+        wait.until { @driver.find_element(:css, by) }
     end
 
 end
